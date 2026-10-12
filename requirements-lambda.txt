@@ -1,0 +1,9 @@
+# Fully pinned Lambda runtime dependency closure for Python 3.12.
+# Keep boto3 and botocore aligned; regenerate the full closure when upgrading.
+boto3==1.43.112
+botocore==1.43.112
+jmespath==1.1.0
+python-dateutil==2.9.0.post0
+s3transfer==0.19.2
+six==1.17.0
+urllib3==2.8.0

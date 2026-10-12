@@ -1,4 +1,5 @@
-# Placeholders only. Copy to terraform.tfvars and replace before future planning.
+# Placeholders only. Copy to terraform.tfvars and replace before planning.
+expected_account_id = "REPLACE_WITH_ACCOUNT_ID"
 aws_region   = "REPLACE_WITH_AWS_REGION"
 project_name = "REPLACE_WITH_PROJECT_NAME"
 environment  = "REPLACE_WITH_ENVIRONMENT"

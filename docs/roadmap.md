@@ -2,13 +2,13 @@
 
 ## Milestone 1 — implemented: local event processing
 
-Synthetic CloudTrail fixtures, normalization with provenance, two deterministic rules, an offline JSON CLI, tests, Ruff, credential-free CI, and Terraform provider/variable configuration. There is no cloud deployment or semantic functionality yet.
+Synthetic CloudTrail fixtures, normalization with provenance, two deterministic rules, an offline JSON CLI, tests, Ruff, and credential-free CI. These remain intact as the foundation for ingestion.
 
-## Milestone 2 — planned: ingestion deployment
+## Milestone 2 — implemented and locally tested: ingestion preparation
 
-Add S3 object notifications through SQS to an ingestion Lambda that reuses the local parser and rules. Support CloudTrail gzip objects, retries, duplicate delivery, partial batch failures, and a dead-letter queue. Preserve original object references and event IDs. Add scoped IAM, encryption, retention, a secure Terraform state backend, operational logs, cost controls, and a documented cleanup path. Start with synthetic uploads; configuring real CloudTrail logging is separate work.
+Terraform now defines private input/results storage, S3 notifications through SQS, a Python ingestion Lambda, a DLQ, scoped IAM, encryption, retained logs, and alarms without notification actions. The handler supports JSON/gzip, bounded reads, version-specific provenance, deterministic results, and partial batch failure recovery. The Lambda ZIP includes pinned dependencies and has an isolated import check. No resources have been deployed; tests use fake clients.
 
-Acceptance: a synthetic upload is processed through the queue; replay does not duplicate stored results; failed records are observable and recoverable. Verify current service, Region, and provider support before implementing resources.
+Next verification gate: follow the [deployment guide](deployment.md) to review a real plan and manually deploy synthetic ingestion. Confirm queue delivery, durable results, version behavior, logs, and DLQ recovery in the intended account. Local validation does not satisfy this gate. Review costs and concurrency quotas first. Configure a secure remote state backend before shared deployment work; local state is sufficient only for the documented single-operator exercise. Real CloudTrail logging remains separate work.
 
 ## Milestone 3 — planned: embeddings and retrieval
 

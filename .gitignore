@@ -244,3 +244,6 @@ credentials.json
 !*.tfvars.example
 !*.tfvars.json.example
 # .terraform.lock.hcl intentionally remains tracked.
+
+# Lambda deployment artifacts (build/ is already ignored above)
+*.zip
