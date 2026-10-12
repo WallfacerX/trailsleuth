@@ -218,3 +218,29 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# TrailSleuth: local IDE configuration and sensitive/generated infrastructure files
+.idea/
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.plan
+tfplan
+plan.out
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+.terraformrc
+terraform.rc
+.aws/
+credentials
+credentials.json
+*.pem
+*.key
+.env.*
+!.env.example
+!*.tfvars.example
+!*.tfvars.json.example
+# .terraform.lock.hcl intentionally remains tracked.

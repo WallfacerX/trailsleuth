@@ -1,0 +1,110 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.11",
+      "eventID": "00000000-0000-4000-8000-000000000001",
+      "eventTime": "2026-01-01T12:01:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "GetCallerIdentity",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/synthetic-analyst",
+        "userName": "synthetic-analyst"
+      },
+      "sourceIPAddress": "192.0.2.1",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "responseElements": null
+    },
+    {
+      "eventVersion": "1.11",
+      "eventID": "00000000-0000-4000-8000-000000000002",
+      "eventTime": "2026-01-01T12:02:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListBuckets",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/synthetic-analyst",
+        "userName": "synthetic-analyst"
+      },
+      "sourceIPAddress": "192.0.2.2",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "responseElements": null
+    },
+    {
+      "eventVersion": "1.11",
+      "eventID": "00000000-0000-4000-8000-000000000003",
+      "eventTime": "2026-01-01T12:03:00Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "StopLogging",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/synthetic-analyst",
+        "userName": "synthetic-analyst"
+      },
+      "sourceIPAddress": "192.0.2.3",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "responseElements": null,
+      "requestParameters": {
+        "name": "synthetic-trail"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "eventID": "00000000-0000-4000-8000-000000000004",
+      "eventTime": "2026-01-01T12:04:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/synthetic-analyst",
+        "userName": "synthetic-analyst"
+      },
+      "sourceIPAddress": "192.0.2.4",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "responseElements": null,
+      "requestParameters": {
+        "userName": "synthetic-service"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "eventID": "00000000-0000-4000-8000-000000000005",
+      "eventTime": "2026-01-01T12:05:00Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "StopLogging",
+      "awsRegion": "us-east-1",
+      "userIdentity": {
+        "type": "IAMUser",
+        "accountId": "123456789012",
+        "arn": "arn:aws:iam::123456789012:user/synthetic-analyst",
+        "userName": "synthetic-analyst"
+      },
+      "sourceIPAddress": "192.0.2.5",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "responseElements": null,
+      "requestParameters": {
+        "name": "synthetic-trail"
+      },
+      "errorCode": "AccessDenied",
+      "errorMessage": "Synthetic caller is not authorized to stop logging."
+    }
+  ]
+}

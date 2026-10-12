@@ -1,0 +1,7 @@
+# Placeholders only. Copy to terraform.tfvars and replace before future planning.
+aws_region   = "REPLACE_WITH_AWS_REGION"
+project_name = "REPLACE_WITH_PROJECT_NAME"
+environment  = "REPLACE_WITH_ENVIRONMENT"
+common_tags = {
+  Owner = "REPLACE_WITH_TEAM_LABEL"
+}
